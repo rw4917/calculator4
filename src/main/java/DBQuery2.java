@@ -2,13 +2,13 @@ import java.sql.*;
 
 public class DBQuery2 {
     public static void main(String[] args) throws SQLException {
-        String dbUrl = "jdbc:postgresql://localhost:5432/postgres";
+        String dbUrl = "JDBC_DATABASE_URL";
         try
         {
             Class.forName("org.postgresql.Driver");
         } catch (Exception e) {
         }
-        Connection conn= DriverManager.getConnection(dbUrl, "rubenweitzman","Ruben3001");
+        Connection conn= DriverManager.getConnection(dbUrl);
 
         try {
             Statement s=conn.createStatement();

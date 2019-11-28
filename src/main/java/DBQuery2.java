@@ -2,7 +2,7 @@ import java.sql.*;
 
 public class DBQuery2 {
     public static void main(String[] args) throws SQLException {
-        String dbUrl = "JDBC_DATABASE_URL";
+        String dbUrl = System.getenv("JDBC_DATABASE_URL");
         try
         {
             Class.forName("org.postgresql.Driver");

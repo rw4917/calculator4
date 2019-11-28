@@ -1,6 +1,6 @@
 import java.sql.*;
 
-public class DBQuery2 {
+public class CreateDB {
     public static void main(String[] args) throws SQLException {
         String dbUrl = System.getenv("JDBC_DATABASE_URL");
         try
@@ -18,7 +18,7 @@ public class DBQuery2 {
                     "    doctorid int NOT NULL\n" +
                     ");\n";
             s.executeQuery(sqlStr2);
-            String sqlStr = "SELECT * FROM patients WHERE id>1;";
+            String sqlStr = "insert into patients (familyname,givenname,phonenumber) values('Jones','Bill','07755678899');";
             ResultSet rset=s.executeQuery(sqlStr);
             while(rset.next()){
                 System.out.println(rset.getInt("id")+" "+ rset.getString("familyname")); }

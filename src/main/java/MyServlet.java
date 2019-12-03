@@ -14,8 +14,9 @@ public class MyServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException,IOException {
         resp.setContentType("text/html");
 
-        DBQuery query = new DBQuery();
-        resp.getWriter().write(query.getOutput());
+//        DBQuery query = new DBQuery();
+//        resp.getWriter().write(query.getOutput());
+        resp.getWriter().write("Hello world");
 
     }
     @Override

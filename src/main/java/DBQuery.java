@@ -15,6 +15,12 @@ public class DBQuery {
 
         try {
             Statement s=conn.createStatement();
+            String sqlStr2 = "create table patientofdoctor(\n" +
+                    "    id SERIAL PRIMARY KEY ,\n" +
+                    "    patientid int NOT NULL,\n" +
+                    "    doctorid int NOT NULL\n" +
+                    ");\n";
+            s.executeQuery(sqlStr2);
             String sqlStr = "SELECT * FROM patients";
             ResultSet rset=s.executeQuery(sqlStr);
             while(rset.next()){

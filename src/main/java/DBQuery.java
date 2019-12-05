@@ -1,7 +1,7 @@
 import java.sql.*;
 
 public class DBQuery {
-    public String output;
+    public String output="";
 
     public void main(String[] args) throws SQLException
     {

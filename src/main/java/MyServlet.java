@@ -13,11 +13,10 @@ public class MyServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException,IOException {
         resp.setContentType("text/html");
-        conn connection = new conn();
-//        CreateDB database = new CreateDB();
-//        DBQuery q1 = new DBQuery();
-//
-//        resp.getWriter().write(q1.getOutput());
+        CreateDB database = new CreateDB();
+        DBQuery q1 = new DBQuery();
+
+        resp.getWriter().write(q1.getOutput());
         resp.getWriter().write("Hello world");
 
     }

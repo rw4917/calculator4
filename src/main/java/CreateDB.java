@@ -1,17 +1,16 @@
+import java.net.URISyntaxException;
 import java.sql.*;
 
 public class CreateDB {
-    public static void main(String[] args) throws SQLException {
+    private static Connection getConnection() throws URISyntaxException, SQLException {
         String dbUrl = System.getenv("JDBC_DATABASE_URL");
-        try
-        {
-            Class.forName("org.postgresql.Driver");
-        } catch (Exception e) {
-        }
-        Connection conn= DriverManager.getConnection(dbUrl);
+        return DriverManager.getConnection(dbUrl);
+    }
+    public static void main(String[] args) throws SQLException, URISyntaxException {
+        Connection connection = getConnection();
 
         try {
-            Statement s=conn.createStatement();
+            Statement s=connection.createStatement();
             System.out.println("connection works");
             String sqlStr2 = "create table patientofdoctor(\n" +
                     "    id SERIAL PRIMARY KEY ,\n" +
@@ -25,7 +24,7 @@ public class CreateDB {
                 System.out.println(rset.getInt("id")+" "+ rset.getString("familyname")); }
             rset.close();
             s.close();
-            conn.close();
+            connection.close();
         }
         catch (Exception e){ }
 

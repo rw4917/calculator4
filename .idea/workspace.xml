@@ -11,7 +11,7 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/gretty_ports.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/gretty_ports.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/gretty_ports.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DBQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DBQuery.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MyServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MyServlet.java" afterDir="false" />
     </list>
@@ -111,7 +111,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.calc [appStart]">
+  <component name="RunManager" selected="Gradle.calculator4 [appStop]">
     <configuration name="calc [appStartDebug]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -231,7 +231,8 @@
       <workItem from="1574328052981" duration="2655000" />
       <workItem from="1574781977807" duration="31000" />
       <workItem from="1574936989545" duration="6768000" />
-      <workItem from="1575386789971" duration="2543000" />
+      <workItem from="1575386789971" duration="3221000" />
+      <workItem from="1575541218515" duration="1433000" />
     </task>
     <task id="LOCAL-00001" summary="&#10;v1">
       <created>1574937156755</created>
@@ -289,7 +290,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575391465436</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="&#10;v1">
+      <created>1575392403694</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1575392403694</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

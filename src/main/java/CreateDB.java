@@ -12,6 +12,7 @@ public class CreateDB {
 
         try {
             Statement s=conn.createStatement();
+            System.out.println("connection works");
             String sqlStr2 = "create table patientofdoctor(\n" +
                     "    id SERIAL PRIMARY KEY ,\n" +
                     "    patientid int NOT NULL,\n" +

@@ -1,3 +1,4 @@
+import java.net.URI;
 import java.net.URISyntaxException;
 import java.sql.*;
 
@@ -33,8 +34,12 @@ public class CreateDB {
     }
 
     private static Connection getConnection() throws URISyntaxException, SQLException {
-        String dbUrl = System.getenv("JDBC_DATABASE_URL");
-        return DriverManager.getConnection(dbUrl);
+        URI dbUri = new URI(System.getenv("DATABASE_URL"));
+        String username = "rrhsgihyhiwjvt";
+        String password = "cf112dbe709c8110fe826c4dc67db8c9aae84b431b3786332752cf81745f8b03";
+        String dbUrl = "jdbc:postgresql://" + dbUri.getHost() + ':' + dbUri.getPort() + dbUri.getPath();
+
+        return DriverManager.getConnection(dbUrl, username, password);
     }
     public static void main(String[] args) throws SQLException, URISyntaxException {
 

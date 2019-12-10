@@ -18,7 +18,7 @@ public class CreateDB {
                     "    doctorid int NOT NULL" +
                     ");\n";
             s.executeQuery(sqlStr2);
-            System.out.println("Hopefully we created the table ")
+            System.out.println("Hopefully we created the table ");
             String sqlStr = "insert into patients (familyname,givenname,phonenumber) values('Jones','Bill','07755678899');";
             ResultSet rset=s.executeQuery(sqlStr);
             while(rset.next()){

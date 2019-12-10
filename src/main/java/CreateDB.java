@@ -12,10 +12,10 @@ public class CreateDB {
             Connection connection = getConnection();
             Statement s=connection.createStatement();
             System.out.println("connection works");
-            String sqlStr2 = "create table patientofdoctor(\n" +
-                    "    id SERIAL PRIMARY KEY ,\n" +
-                    "    patientid int NOT NULL,\n" +
-                    "    doctorid int NOT NULL\n" +
+            String sqlStr2 = "create table patientofdoctor(" +
+                    "    id SERIAL PRIMARY KEY ," +
+                    "    patientid int NOT NULL," +
+                    "    doctorid int NOT NULL" +
                     ");\n";
             s.executeQuery(sqlStr2);
             System.out.println("Hopefully we created the table ")
@@ -35,7 +35,7 @@ public class CreateDB {
     }
 
     private static Connection getConnection() throws URISyntaxException, SQLException {
-        URI dbUri = new URI(System.getenv("DATABASE_URL"));
+        URI dbUri = new URI(System.getenv("JDBC_DATABASE_URL"));
         String username = "rrhsgihyhiwjvt";
         String password = "cf112dbe709c8110fe826c4dc67db8c9aae84b431b3786332752cf81745f8b03";
         String dbUrl = "jdbc:postgresql://" + dbUri.getHost() + ':' + dbUri.getPort() + dbUri.getPath();

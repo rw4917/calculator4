@@ -2,14 +2,13 @@ import java.net.URISyntaxException;
 import java.sql.*;
 
 public class CreateDB {
-    private static Connection getConnection() throws URISyntaxException, SQLException {
-        String dbUrl = System.getenv("JDBC_DATABASE_URL");
-        return DriverManager.getConnection(dbUrl);
-    }
-    public static void main(String[] args) throws SQLException, URISyntaxException {
-        Connection connection = getConnection();
+
+    public CreateDB() {
+
+
 
         try {
+            Connection connection = getConnection();
             Statement s=connection.createStatement();
             System.out.println("connection works");
             String sqlStr2 = "create table patientofdoctor(\n" +
@@ -30,6 +29,14 @@ public class CreateDB {
             System.out.println("There was a problem:");
             e.printStackTrace();
         }
+
+    }
+
+    private static Connection getConnection() throws URISyntaxException, SQLException {
+        String dbUrl = System.getenv("JDBC_DATABASE_URL");
+        return DriverManager.getConnection(dbUrl);
+    }
+    public static void main(String[] args) throws SQLException, URISyntaxException {
 
     }
 }

@@ -17,7 +17,7 @@ public class CreateDB {
                     "                    id SERIAL PRIMARY KEY,\n" +
                     "                    familyname varchar(128) NOT NULL, givenname varchar(128) NOT NULL, phonenumber varchar(32)" +
                     ",username varchar(128), password varchar(128) " +
-                    "            );";
+                    "            );\n";
             s.executeUpdate(sqlStr3);
             s.executeUpdate("DROP TABLE IF EXISTS patientsinfo");
             String sqlStr2 = "create table patienstinfo(" +

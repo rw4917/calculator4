@@ -15,7 +15,7 @@ public class MyServlet extends HttpServlet {
         resp.setContentType("text/html");
 
 
-        CreateDB database = new CreateDB();
+//        CreateDB database = new CreateDB();
         DBQuery q1 = new DBQuery();
 
         resp.getWriter().write(q1.getOutput());

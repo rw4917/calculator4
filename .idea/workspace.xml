@@ -2,9 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e859e59-873c-4a72-af1c-763da5581a5f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Entries/Activity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Entries/BloodGlucoseLevel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Entries/Exercise.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Entries/Food.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Entries/Insulin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Entries/Medication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Methods/CompMethod.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Methods/IntensiveMethod.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Methods/Method.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Methods/SimpleMethod.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DBQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DBQuery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MyServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MyServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CreateDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CreateDB.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -95,7 +104,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -103,6 +112,9 @@
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -241,7 +253,7 @@
       <workItem from="1575541218515" duration="5707000" />
       <workItem from="1575847828543" duration="28000" />
       <workItem from="1575993020175" duration="4778000" />
-      <workItem from="1576072246125" duration="3712000" />
+      <workItem from="1576072246125" duration="5631000" />
     </task>
     <task id="LOCAL-00001" summary="&#10;v1">
       <created>1574937156755</created>
@@ -446,7 +458,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576086322143</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="&#10;v1">
+      <created>1576091827760</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1576091827760</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -27,11 +27,13 @@ public class MyServlet extends HttpServlet {
     {
         String reqBody=req.getReader().lines().collect(Collectors.joining(System.lineSeparator()));
         Gson gson = new Gson();
-        //BloodGLucoseLevel lev=gson.fromJson(reqBody,BloodGLucoseLevel.class);
-        //String str2 = String.valueOf(lev.getLevel());
+        BloodGLucoseLevel lev=gson.fromJson(reqBody,BloodGLucoseLevel.class);
+        String str2 = String.valueOf(lev.getLevel());
+
         resp.setContentType("text/html");
         //resp.getWriter().write(str2);
         resp.getWriter().write("Thank you client!");
+        resp.getWriter().write(str2);
     }
 
 }

@@ -12,19 +12,21 @@ public class CreateDB {
             Connection connection = getConnection();
             Statement s=connection.createStatement();
             System.out.println("connection works");
-
+            s.executeUpdate("DROP TABLE IF EXISTS patients");
             String sqlStr3 = "create table patients (\n" +
                     "                    id SERIAL PRIMARY KEY,\n" +
                     "                    familyname varchar(128) NOT NULL, givenname varchar(128) NOT NULL, phonenumber varchar(32)" +
                     ",username varchar(128), password varchar(128) " +
                     "            );";
             s.executeUpdate(sqlStr3);
-            String sqlStr2 = "create table patientinfo(" +
+            s.executeUpdate("DROP TABLE IF EXISTS patientsinfo");
+            String sqlStr2 = "create table patienstinfo(" +
                     "    id SERIAL PRIMARY KEY ," +
                     "    patientid int NOT NULL," +
                     "    doctorid int NOT NULL" +
                     ");\n";
             s.executeUpdate(sqlStr2);
+            s.executeUpdate("DROP TABLE IF EXISTS logs");
             String sqlStr5 = "create table logs(" +
                     "    id SERIAL PRIMARY KEY ," +
                     "    patientid int NOT NULL," +

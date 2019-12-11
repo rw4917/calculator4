@@ -23,8 +23,10 @@ public class DBQuery {
 //                    ");\n";
 //            s.executeUpdate(sqlStr2);
 //
+            s.executeUpdate("insert into patients (familyname,givenname,phonenumber,username,password) values('Jones','Bill','07755678899','ruben','weitz');");
             String sqlStr = "SELECT * FROM patients";
             ResultSet rset=s.executeQuery(sqlStr);
+
             while(rset.next()){
                 output+=rset.getInt("id")+" "+ rset.getString("familyname"); }
             rset.close();

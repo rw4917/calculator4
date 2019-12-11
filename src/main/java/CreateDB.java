@@ -33,14 +33,9 @@ public class CreateDB {
         }
 
     }
-
     private static Connection getConnection() throws URISyntaxException, SQLException {
-        URI dbUri = new URI(System.getenv("JDBC_DATABASE_URL"));
-        String username = "rrhsgihyhiwjvt";
-        String password = "cf112dbe709c8110fe826c4dc67db8c9aae84b431b3786332752cf81745f8b03";
-        String dbUrl = "jdbc:postgresql://" + dbUri.getHost() + ':' + dbUri.getPort() + dbUri.getPath();
-
-        return DriverManager.getConnection(dbUrl, username, password);
+        String dbUrl = System.getenv("JDBC_DATABASE_URL");
+        return DriverManager.getConnection(dbUrl);
     }
     public static void main(String[] args) throws SQLException, URISyntaxException {
 

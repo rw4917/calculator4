@@ -35,6 +35,7 @@ public class CreateDB {
     }
     private static Connection getConnection() throws URISyntaxException, SQLException {
         String dbUrl = System.getenv("JDBC_DATABASE_URL");
+        System.out.println("Working until now");
         return DriverManager.getConnection(dbUrl);
     }
     public static void main(String[] args) throws SQLException, URISyntaxException {

@@ -26,12 +26,12 @@ public class MyServlet extends HttpServlet {
     public void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
     {
         String reqBody=req.getReader().lines().collect(Collectors.joining(System.lineSeparator()));
-//        Gson gson = new Gson();
-//        BloodGLucoseLevel lev=gson.fromJson(reqBody,BloodGLucoseLevel.class);
-//        String str2 = String.valueOf(lev.getLevel());
+        Gson gson = new Gson();
+        BloodGLucoseLevel lev=gson.fromJson(reqBody,BloodGLucoseLevel.class);
+        String str2 = String.valueOf(lev.getLevel());
 
         resp.setContentType("text/html");
-        //resp.getWriter().write(str2);
+        resp.getWriter().write(str2);
         resp.getWriter().write("Thank you client!");
     }
 

@@ -28,7 +28,9 @@ public class MyServlet extends HttpServlet {
         System.out.println("In do post");
         String reqBody=req.getReader().lines().collect(Collectors.joining(System.lineSeparator()));
         Gson gson = new Gson();
-        BloodGLucoseLevel lev=gson.fromJson(reqBody,BloodGLucoseLevel.class);
+        System.out.println("Json is "+reqBody);
+        String newReq="{\"date\":\"Jan 10, 2020, 3:44:31 PM\",\"level\":0.0}";
+        BloodGLucoseLevel lev=gson.fromJson(newReq,BloodGLucoseLevel.class);
         String str2 = String.valueOf(lev.getLevel());
 
         resp.setContentType("text/html");

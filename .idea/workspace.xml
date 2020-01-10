@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8e859e59-873c-4a72-af1c-763da5581a5f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MyServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MyServlet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +36,23 @@
         </task>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="untitled" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="untitled" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="untitled" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="gretty" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
@@ -89,7 +104,7 @@
       <recent name="$PROJECT_DIR$/src/main/java" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.calculator4 [appStop]">
+  <component name="RunManager" selected="Gradle.calc [appStartDebug]">
     <configuration name="calc [appStartDebug]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -503,7 +518,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578517203209</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="&#10;v1">
+      <created>1578665712454</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1578665712454</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -533,13 +555,31 @@
       <screen x="0" y="23" width="1440" height="808" />
     </state>
     <state x="554" y="323" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.23.1440.808@0.23.1440.808" timestamp="1578517166957" />
-    <state x="272" y="23" key="CommitChangelistDialog2" timestamp="1578517202864">
-      <screen x="0" y="23" width="1440" height="808" />
+    <state x="272" y="0" key="CommitChangelistDialog2" timestamp="1578665712326">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state x="272" y="0" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1578665712326" />
     <state x="272" y="23" key="CommitChangelistDialog2/0.23.1440.808@0.23.1440.808" timestamp="1578517202864" />
-    <state x="320" y="167" key="Vcs.Push.Dialog.v2" timestamp="1578517206447">
-      <screen x="0" y="23" width="1440" height="808" />
+    <state width="1398" height="303" key="GridCell.Tab.0.bottom" timestamp="1578666052085">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state width="1398" height="303" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1578666052085" />
+    <state width="1398" height="303" key="GridCell.Tab.0.center" timestamp="1578666052083">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="303" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1578666052083" />
+    <state width="1398" height="303" key="GridCell.Tab.0.left" timestamp="1578666052082">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="303" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1578666052082" />
+    <state width="1398" height="303" key="GridCell.Tab.0.right" timestamp="1578666052084">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="303" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1578666052084" />
+    <state x="320" y="160" key="Vcs.Push.Dialog.v2" timestamp="1578665716358">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="320" y="160" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1578665716358" />
     <state x="320" y="167" key="Vcs.Push.Dialog.v2/0.23.1440.808@0.23.1440.808" timestamp="1578517206447" />
     <state x="376" y="260" key="com.intellij.ide.util.TipDialog" timestamp="1578517129843">
       <screen x="0" y="23" width="1440" height="808" />
@@ -549,5 +589,16 @@
       <screen x="0" y="23" width="1440" height="808" />
     </state>
     <state x="509" y="350" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.808@0.23.1440.808" timestamp="1578517191254" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/MyServlet.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

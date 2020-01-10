@@ -48,7 +48,7 @@ public class DBQuery {
     }
     private static Connection getConnection() throws URISyntaxException, SQLException {
         String dbUrl = System.getenv("JDBC_DATABASE_URL");
-        System.out.println("Working until now");
+        System.out.println("Working until nnow");
         return DriverManager.getConnection(dbUrl);
     }
 }

@@ -25,6 +25,7 @@ public class MyServlet extends HttpServlet {
     @Override
     public void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
     {
+        System.out.println("In do post");
         String reqBody=req.getReader().lines().collect(Collectors.joining(System.lineSeparator()));
         Gson gson = new Gson();
         BloodGLucoseLevel lev=gson.fromJson(reqBody,BloodGLucoseLevel.class);

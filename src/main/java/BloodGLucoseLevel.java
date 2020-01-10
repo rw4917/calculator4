@@ -7,23 +7,25 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Date;
-import java.sql.*;
 
-
-
-
-
-public class BloodGLucoseLevel implements Serializable {
+public class BloodGLucoseLevel implements Serializable
+{
     private String date;
     private double level ;
-    public BloodGLucoseLevel() throws URISyntaxException, SQLException
+    public BloodGLucoseLevel()
     {
-        level = 0;
-        Connection connection = getConnection();
-        Statement s = connection.createStatement();
-        System.out.println("connection works");
-        s.executeUpdate("insert into logs (patients,method,glucoselevel) values('0','1','0.2');");
-
+        level =0;
+        try
+        {
+            Connection connection = getConnection();
+            Statement s = connection.createStatement();
+            System.out.println("connection works");
+        }
+        catch (Exception e)
+        {
+            System.out.println("There was a problem:");
+            e.printStackTrace();
+        }
     }
     public double getLevel()
     {
@@ -38,11 +40,10 @@ public class BloodGLucoseLevel implements Serializable {
         this.date = new Date().toString();
 
     }
-
-    private static Connection getConnection() throws URISyntaxException, SQLException {
+    private static Connection getConnection() throws URISyntaxException, SQLException
+    {
         String dbUrl = System.getenv("JDBC_DATABASE_URL");
         System.out.println("Working until nnow");
         return DriverManager.getConnection(dbUrl);
     }
 }
-

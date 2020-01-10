@@ -1,8 +1,10 @@
+
+
 import java.io.Serializable;
 import java.util.Date;
 
 public class BloodGLucoseLevel implements Serializable {
-    private Date date = new Date();
+    private String date;
     private double level ;
     public BloodGLucoseLevel()
     {
@@ -18,6 +20,7 @@ public class BloodGLucoseLevel implements Serializable {
     }
 
     public void setDate(Date date) {
-        this.date = date;
+        this.date = new Date().toString();
+
     }
 }

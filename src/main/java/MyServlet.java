@@ -30,7 +30,7 @@ public class MyServlet extends HttpServlet {
         BloodGLucoseLevel lev=gson.fromJson(reqBody,BloodGLucoseLevel.class);
         String str2 = String.valueOf(lev.getLevel());
 
-        resp.setContentType("application/json");
+        resp.setContentType("text/html");
         resp.getWriter().write(str2);
         resp.getWriter().write("Thank you client!");
     }

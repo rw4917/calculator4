@@ -45,8 +45,8 @@ public class MyServlet extends HttpServlet {
             PreparedStatement ps;
             System.out.println("connection works");
 
-            //s.executeUpdate("DROP TABLE IF EXISTS patients");
-            //String sqlStr3 = "create table patients ( id SERIAL PRIMARY KEY,familyname varchar(128) NOT NULL, givenname varchar(128) NOT NULL, phonenumber varchar(32),username varchar(128), password varchar(128)) ";
+            s.executeUpdate("DROP TABLE IF EXISTS patients");
+            String sqlStr3 = "create table patients ( id SERIAL PRIMARY KEY,familyname varchar(128) NOT NULL, givenname varchar(128) NOT NULL, phonenumber varchar(32),username varchar(128), password varchar(128)) ";
             String sql = "CREATE TABLE IF NOT EXISTS warehouses (\n"
                     + "    id integer PRIMARY KEY,\n"
                     + "    name text NOT NULL,\n"
@@ -54,12 +54,12 @@ public class MyServlet extends HttpServlet {
                     + ");";
 
 
-            //s.executeUpdate(sqlStr3);
+            s.executeUpdate(sqlStr3);
             s.executeUpdate(sql);
             System.out.println("table created");
 
 
-            s.executeUpdate("insert into patients (familyname,givenname,phonenumber,username,password) values('Jones','Bill','07755678899','ruben','weitz');");
+            s.executeUpdate("insert into patients (familyname,givenname,phonenumber,username,password) values('ruben','weitzman','07755678899','ruben','weitz');");
             ps = connection.prepareStatement("insert into patients (givenname,phonenumber,username,password) values('?','?','?','?');");
             ps.setString(1, String.valueOf(reg.getName()));
             ps.setString(2, String.valueOf(reg.getPhone()));

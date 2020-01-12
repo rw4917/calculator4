@@ -7,10 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.net.URISyntaxException;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.stream.Collectors;
 
 @WebServlet(urlPatterns={"/patients"},loadOnStartup = 1)
@@ -44,8 +41,14 @@ public class MyServlet extends HttpServlet {
         try {
             Connection connection = getConnection();
             Statement s = connection.createStatement();
+            PreparedStatement ps;
             System.out.println("connection works");
             s.executeUpdate("insert into patients (familyname,givenname,phonenumber,username,password) values('Jones','Bill','07755678899','ruben','weitz');");
+            ps = connection.prepareStatement("insert into patients (givenname,phonenumber,username,password) values('?','?','?','?');");
+            ps.setString(1, String.valueOf(reg.getName()));
+            ps.setString(2, String.valueOf(reg.getPhone()));
+            ps.setString(3, String.valueOf(reg.getUserName()));
+            ps.setString(4, String.valueOf(reg.getPassword()));
 
 
 

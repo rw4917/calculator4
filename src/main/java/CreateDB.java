@@ -1,7 +1,7 @@
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.sql.*;
-
+//this file was only used once to create the tables on the server side
 public class CreateDB {
 
     public CreateDB() {

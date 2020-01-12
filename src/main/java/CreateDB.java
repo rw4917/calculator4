@@ -30,14 +30,14 @@ public class CreateDB {
             String sqlStr5 = "create table logs(" +
                     "    id SERIAL PRIMARY KEY ," +
                     "    patientid int NOT NULL," +
-                    "    date date ," +
+                    "    date varchar(128) ," +
                     "    method int NOT NULL," +
                     "    GlucoseLevel int NOT NULL," +
                     "    GlucoseTime timestamp," +
                     "    Exercice varchar," +
                     "    ExerciceStartTime timestamp ," +
                     "    ExerciceEndTime timestamp ," +
-                    "    Food varchar ," +
+                    "    Food varchar(128) ," +
                     "    FoodTime timestamp ," +
                     "    Carbs int NOT NULL ," +
                     "    Med int NOT NULL," +

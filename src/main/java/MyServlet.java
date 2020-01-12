@@ -44,6 +44,15 @@ public class MyServlet extends HttpServlet {
             Statement s = connection.createStatement();
             PreparedStatement ps;
             System.out.println("connection works");
+
+            s.executeUpdate("DROP TABLE IF EXISTS patients");
+            String sqlStr3 = "create table patients (\n" +
+                    "                    id SERIAL PRIMARY KEY,\n" +
+                    "                    familyname varchar(128) NOT NULL, givenname varchar(128) NOT NULL, phonenumber varchar(32)" +
+                    ",username varchar(128), password varchar(128) " +
+                    "            );\n";
+
+
             s.executeUpdate("insert into patients (familyname,givenname,phonenumber,username,password) values('Jones','Bill','07755678899','ruben','weitz');");
             ps = connection.prepareStatement("insert into patients (givenname,phonenumber,username,password) values('?','?','?','?');");
             ps.setString(1, String.valueOf(reg.getName()));

@@ -3,7 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="8e859e59-873c-4a72-af1c-763da5581a5f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MyServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MyServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Entries/Activity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entries/Activity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Entries/Exercise.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entries/Exercise.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Entries/Food.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entries/Food.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Entries/Insulin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Entries/Medication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entries/Medication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Methods/CompMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Methods/CompMethod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Methods/IntensiveMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Methods/IntensiveMethod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Methods/Method.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Methods/Method.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Methods/SimpleMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Methods/SimpleMethod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Servlet2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Servlet2.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -246,13 +255,6 @@
       <workItem from="1578405989816" duration="1747000" />
       <workItem from="1578407868058" duration="470000" />
       <workItem from="1578418744585" duration="22000" />
-    </task>
-    <task id="LOCAL-00004" summary="&#10;v1">
-      <created>1574940503058</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1574940503058</updated>
     </task>
     <task id="LOCAL-00005" summary="&#10;v1">
       <created>1574945420609</created>
@@ -590,7 +592,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578862883208</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="table creation">
+      <created>1578863152490</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1578863152493</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -622,27 +631,27 @@
       <screen x="0" y="23" width="1440" height="808" />
     </state>
     <state x="554" y="323" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.23.1440.808@0.23.1440.808" timestamp="1578517166957" />
-    <state x="272" y="0" key="CommitChangelistDialog2" timestamp="1578862882878">
+    <state x="272" y="0" key="CommitChangelistDialog2" timestamp="1578863152157">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="272" y="0" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1578862882878" />
+    <state x="272" y="0" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1578863152157" />
     <state x="272" y="23" key="CommitChangelistDialog2/0.23.1440.808@0.23.1440.808" timestamp="1578517202864" />
-    <state width="1398" height="303" key="GridCell.Tab.0.bottom" timestamp="1578767754324">
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1578863569934">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="303" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1578767754324" />
-    <state width="1398" height="303" key="GridCell.Tab.0.center" timestamp="1578767754321">
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1578863569934" />
+    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1578863569932">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="303" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1578767754321" />
-    <state width="1398" height="303" key="GridCell.Tab.0.left" timestamp="1578767754320">
+    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1578863569932" />
+    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1578863569931">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="303" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1578767754320" />
-    <state width="1398" height="303" key="GridCell.Tab.0.right" timestamp="1578767754323">
+    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1578863569930" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1578863569933">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="303" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1578767754323" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1578863569933" />
     <state width="1398" height="303" key="GridCell.Tab.1.bottom" timestamp="1578767754329">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -659,10 +668,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1398" height="303" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1578767754328" />
-    <state x="320" y="160" key="Vcs.Push.Dialog.v2" timestamp="1578862886144">
+    <state x="320" y="160" key="Vcs.Push.Dialog.v2" timestamp="1578863154751">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="160" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1578862886144" />
+    <state x="320" y="160" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1578863154751" />
     <state x="320" y="167" key="Vcs.Push.Dialog.v2/0.23.1440.808@0.23.1440.808" timestamp="1578517206447" />
     <state x="376" y="260" key="com.intellij.ide.util.TipDialog" timestamp="1578517129843">
       <screen x="0" y="23" width="1440" height="808" />

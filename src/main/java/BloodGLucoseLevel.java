@@ -2,10 +2,7 @@
 
 import java.io.Serializable;
 import java.net.URISyntaxException;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.Date;
 
 public class BloodGLucoseLevel implements Serializable
@@ -20,6 +17,11 @@ public class BloodGLucoseLevel implements Serializable
             Connection connection = getConnection();
             Statement s = connection.createStatement();
             System.out.println("connection works");
+            PreparedStatement ps;
+            ps = connection.prepareStatement("insert into logs (level, date) values(?,?)");
+            ps.setString(1, String.valueOf(level));
+            ps.setString(2, date);
+
         }
         catch (Exception e)
         {

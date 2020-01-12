@@ -1,3 +1,4 @@
+import Methods.SimpleMethod;
 import com.google.gson.Gson;
 
 import javax.servlet.ServletException;
@@ -6,6 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.net.URISyntaxException;
+import java.sql.*;
 import java.util.stream.Collectors;
 
 @WebServlet(urlPatterns={"/logs"},loadOnStartup = 1)
@@ -30,12 +33,42 @@ public class Servlet2 extends HttpServlet {
 
         System.out.println("Json is "+reqBody);
         Gson gson = new Gson();
-        RegistrationDetails reg=gson.fromJson(reqBody,RegistrationDetails.class);
-        String str2 = String.valueOf(reg.getEmail());
+        SimpleMethod simple=gson.fromJson(reqBody,SimpleMethod.class);
+        String str2 = null;
 
         resp.setContentType("text/html");
         resp.getWriter().write(str2);
         resp.getWriter().write("Thank you client!");
+
+        try
+        {
+            Connection connection = getConnection();
+            Statement s = connection.createStatement();
+            PreparedStatement ps;
+            System.out.println("connection works");
+            s.executeUpdate("insert into logs (familyname,givenname,phonenumber,username,password) values('Jones','Bill','07755678899','ruben','weitz');");
+            ps = connection.prepareStatement("insert into patients (givenname,phonenumber,username,password) values('?','?','?','?');");
+            ps.setString(1, String.valueOf(reg.getName()));
+            ps.setString(2, String.valueOf(reg.getPhone()));
+            ps.setString(3, String.valueOf(reg.getUserName()));
+            ps.setString(4, String.valueOf(reg.getPassword()));
+
+
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+        }
+
+
+
+    }
+    private static Connection getConnection() throws URISyntaxException, SQLException {
+        String dbUrl = System.getenv("JDBC_DATABASE_URL");
+        System.out.println("Working until nnow");
+        return DriverManager.getConnection(dbUrl);
     }
 
 }

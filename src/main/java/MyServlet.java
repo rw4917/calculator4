@@ -38,7 +38,8 @@ public class MyServlet extends HttpServlet {
         resp.setContentType("text/html");
         resp.getWriter().write(str2);
         resp.getWriter().write("Thank you client!");
-        try {
+        try
+        {
             Connection connection = getConnection();
             Statement s = connection.createStatement();
             PreparedStatement ps;
@@ -49,6 +50,8 @@ public class MyServlet extends HttpServlet {
             ps.setString(2, String.valueOf(reg.getPhone()));
             ps.setString(3, String.valueOf(reg.getUserName()));
             ps.setString(4, String.valueOf(reg.getPassword()));
+            ps.executeUpdate();
+            System.out.println("inserted into tables");
 
 
 

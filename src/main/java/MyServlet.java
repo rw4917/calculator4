@@ -45,9 +45,17 @@ public class MyServlet extends HttpServlet {
             PreparedStatement ps;
             System.out.println("connection works");
 
-            s.executeUpdate("DROP TABLE IF EXISTS patients");
-            String sqlStr3 = "create table patients ( id SERIAL PRIMARY KEY,familyname varchar(128) NOT NULL, givenname varchar(128) NOT NULL, phonenumber varchar(32),username varchar(128), password varchar(128)) ";
-            s.executeUpdate(sqlStr3);
+            //s.executeUpdate("DROP TABLE IF EXISTS patients");
+            //String sqlStr3 = "create table patients ( id SERIAL PRIMARY KEY,familyname varchar(128) NOT NULL, givenname varchar(128) NOT NULL, phonenumber varchar(32),username varchar(128), password varchar(128)) ";
+            String sql = "CREATE TABLE IF NOT EXISTS warehouses (\n"
+                    + "    id integer PRIMARY KEY,\n"
+                    + "    name text NOT NULL,\n"
+                    + "    capacity real\n"
+                    + ");";
+
+
+            //s.executeUpdate(sqlStr3);
+            s.executeUpdate(sql);
             System.out.println("table created");
 
 

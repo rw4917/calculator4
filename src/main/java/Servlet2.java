@@ -46,15 +46,6 @@ public class Servlet2 extends HttpServlet {
             Statement s = connection.createStatement();
             PreparedStatement ps;
             System.out.println("connection works");
-            .executeUpdate("insert into patients (familyname,givenname,phonenumber,username,password) values('Jones','Bill','07755678899','ruben','weitz');");
-            ps = connection.prepareStatement("insert into patients (givenname,phonenumber,username,password) values('?','?','?','?');");
-            ps.setString(1, String.valueOf(reg.getName()));
-            ps.setString(2, String.valueOf(reg.getPhone()));
-            ps.setString(3, String.valueOf(reg.getUserName()));
-            ps.setString(4, String.valueOf(reg.getPassword()));
-            ps.executeUpdate();
-            System.out.println("inserted into tables");
-
 
 
 

@@ -1,3 +1,5 @@
+import Methods.CompMethod;
+import Methods.IntensiveMethod;
 import Methods.SimpleMethod;
 import com.google.gson.Gson;
 
@@ -10,15 +12,14 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 import java.sql.*;
 import java.util.stream.Collectors;
-
-@WebServlet(urlPatterns={"/logs"},loadOnStartup = 1)
-public class Servlet2 extends HttpServlet {
+//this server handles http request for log entry for simple method
+@WebServlet(urlPatterns={"/intensive"},loadOnStartup = 1)
+public class ServletIntensive extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException,IOException {
         resp.setContentType("text/html");
 
 
-//        CreateDB database = new CreateDB();
         DBQuery q1 = new DBQuery();
 
         resp.getWriter().write(q1.getOutput());
@@ -33,7 +34,7 @@ public class Servlet2 extends HttpServlet {
 
         System.out.println("Json is "+reqBody);
         Gson gson = new Gson();
-        SimpleMethod simple=gson.fromJson(reqBody,SimpleMethod.class);
+        IntensiveMethod intense=gson.fromJson(reqBody, IntensiveMethod.class);
         String str2 = null;
 
         resp.setContentType("text/html");
@@ -46,7 +47,14 @@ public class Servlet2 extends HttpServlet {
             Statement s = connection.createStatement();
             PreparedStatement ps;
             System.out.println("connection works");
+            ps = connection.prepareStatement("insert into logs (method,date,glucoselevel,food,exercice,medecine) values(1,'?','?',?','?',?');");//look at database architecture
+            ps.setString(1, String.valueOf(intense.getDate()));
+            ps.setString(2, String.valueOf(intense.getBGL()));
+            ps.setString(3, String.valueOf(intense.getFood()));
+            ps.setString(4, String.valueOf(intense.getExercise()));
+            ps.setString(5, String.valueOf(intense.getMed()));
 
+            ps.executeUpdate();
 
 
         } catch (SQLException e) {
@@ -58,7 +66,7 @@ public class Servlet2 extends HttpServlet {
 
 
     }
-    private static Connection getConnection() throws URISyntaxException, SQLException {
+    private static Connection getConnection() throws URISyntaxException, SQLException {//method implementing the connection
         String dbUrl = System.getenv("JDBC_DATABASE_URL");
         System.out.println("Working until nnow");
         return DriverManager.getConnection(dbUrl);

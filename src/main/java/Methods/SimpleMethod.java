@@ -3,7 +3,7 @@ package Methods;
 import Entries.BloodGlucoseLevel;
 
 import java.util.Date;
-
+//we are using the same architecture that we found on the server side
 public class SimpleMethod extends Method {
 
 

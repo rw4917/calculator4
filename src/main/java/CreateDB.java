@@ -2,6 +2,7 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.sql.*;
 //this file was only used once to create the tables on the server side
+
 public class CreateDB {
 
     public CreateDB() {
@@ -22,7 +23,7 @@ public class CreateDB {
             s.executeUpdate("DROP TABLE IF EXISTS patientsinfo");
             String sqlStr2 = "create table patienstinfo(" +
                     "    id SERIAL PRIMARY KEY ," +
-                    "    patientid int NOT NULL," +
+                    "    patientid int FOREIGN KEY NOT NULL," +//use of foreign keys to later retrieve information efficiently
                     "    doctorid int NOT NULL" +
                     ");\n";
             s.executeUpdate(sqlStr2);
